@@ -30,7 +30,7 @@ enum {
 /* If HDMI_ENABLE, system will auto configure output mode according to EDID 
  * If HDMI_DISABLE, system will output mode according to macro HDMI_VIDEO_DEFAULT_MODE
  */
-#define HDMI_AUTO_CONFIGURE			HDMI_DISABLE
+#define HDMI_AUTO_CONFIGURE			HDMI_ENABLE
 
 /* default HDMI output audio mode */
 #define HDMI_AUDIO_DEFAULT_CHANNEL		2
@@ -58,7 +58,7 @@ enum {
 	VIDEO_INPUT_COLOR_YCBCR
 };
 /********************************************************************
-**                          结构定义                                *
+**                          锟结构锟斤拷锟斤拷                                *
 ********************************************************************/
 /* HDMI video mode code according CEA-861-E*/
 enum hdmi_video_mode
