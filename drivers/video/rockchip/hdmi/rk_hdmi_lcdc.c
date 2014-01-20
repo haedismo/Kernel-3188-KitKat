@@ -246,9 +246,9 @@ int hdmi_ouputmode_select(struct hdmi *hdmi, int edid_ok)
 	int i, pixclock;
 	
 	if(edid_ok != HDMI_ERROR_SUCESS) {
-		dev_err(hdmi->dev, "warning: EDID error, assume sink as HDMI and asume minitor support audio output!!!!");
+		dev_err(hdmi->dev, "warning: EDID error, assume sink as HDMI and assume monitor support audio output!");
 		hdmi->edid.sink_hdmi = 1;
-		//if edid error,asume monitor support audio output.
+		//if edid error,assume monitor support audio output.
 		hdmi->edid.base_audio_support = 1;
 	}
 
@@ -258,7 +258,7 @@ int hdmi_ouputmode_select(struct hdmi *hdmi, int edid_ok)
 		hdmi->autoconfig = HDMI_DISABLE;
 	}
 	if(head->next == head) {
-		dev_info(hdmi->dev, "warning: no CEA video mode parsed from EDID !!!!");
+		dev_info(hdmi->dev, "warning: no CEA video mode parsed from EDID!");
 		// If EDID get error, list all system supported mode.
 		// If output mode is set to DVI and EDID is ok, check
 		// the output timing.
